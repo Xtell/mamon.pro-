@@ -1,6 +1,5 @@
 // VARIABLES
-$tablet-width: 768px;
-$desktop-width: 1180px;
+$mobile-width: 708px;
 $accent-color: #5528ff;
 $text-color: #4f4f4f;
 //LIBRARIES
@@ -21,6 +20,9 @@ $text-color: #4f4f4f;
 @include font('Ubuntu', normal, 700, '../fonts/ubuntu-bold');
 
 // GENERAL STYLES
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
 img {
     max-width: 100%;
     height: auto;
@@ -40,17 +42,19 @@ img {
 body {
     position: relative;
     min-width: 320px;
-    font-family: 'Roboto', 'Arial', sans-serif;
+    font-family: 'Ubuntu', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 20px;
     color: #000000;
 }
 .container {
     width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
 }
-@media (min-width: $tablet-width) {
+@media (max-width: $mobile-width) {
     .container {
         
     }
