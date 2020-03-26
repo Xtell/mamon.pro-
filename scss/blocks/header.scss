@@ -1,0 +1,32 @@
+.header {
+    width: 100%;
+    padding-top: 53px;
+    padding-bottom: 53px;
+}
+.header__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__logo {
+    width: 200px;
+}
+.header__logo-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color:#202020;
+    text-decoration: none;
+}
+.header__logo-link img {
+    display: block;
+    width: 58px;
+    height: 58px;
+    margin-right: 25px;
+
+}
