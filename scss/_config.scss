@@ -1,0 +1,57 @@
+// VARIABLES
+$tablet-width: 768px;
+$desktop-width: 1180px;
+$accent-color: #5528ff;
+$text-color: #4f4f4f;
+//LIBRARIES
+@import '../../node_modules/normalize.scss/normalize';
+
+// FONTS
+@mixin font($font-name, $font-style, $font-weight, $url) {
+    @font-face {
+        font-family: $font-name;
+        font-style: $font-style;
+        font-weight: $font-weight;
+        src: url($url + '.woff2') format('woff2'),
+             url($url + '.woff') format('woff');
+    } 
+}
+
+@include font('Ubuntu', normal, 400, '../fonts/ubuntu-regular');
+@include font('Ubuntu', normal, 700, '../fonts/ubuntu-bold');
+
+// GENERAL STYLES
+img {
+    max-width: 100%;
+    height: auto;
+}
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+body {
+    position: relative;
+    min-width: 320px;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+.container {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media (min-width: $tablet-width) {
+    .container {
+        
+    }
+}
