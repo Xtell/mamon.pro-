@@ -1,0 +1,38 @@
+$hamburger-color: #000000;
+
+.hamburger {
+    position: relative;
+    width: 40px;
+    height: 26px;
+    border: 0;
+    background-color: transparent;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 30px;
+        height: 4px;
+        background-color: $hamburger-color;
+        border-radius: 5px;
+        transition: 0.3s all;
+    }
+    &::before {
+        top: 3px;
+        box-shadow: 0px 8px $hamburger-color;
+    }
+    &::after {
+        bottom: 3px;
+    }
+}
+.hamburger--close {
+    &::before {
+        top: 11px;
+        box-shadow: none;
+        transform: rotate(45deg);
+    }
+    &::after {
+        bottom: 11px;
+        transform: rotate(-45deg);
+    }
+}
