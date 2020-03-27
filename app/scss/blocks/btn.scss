@@ -12,10 +12,11 @@
     transition: 0.3s background-color;
 
     &:hover {
-        background-color: darken($accent-color, 3%);
+        background-color: lighten($accent-color, 5%);
+
     }
     &:active {
-        background-color: lighten($accent-color, 3%);
+        background-color: rgba(lighten($accent-color, 5%), 0.7);
     }
 }
 .btn--small {

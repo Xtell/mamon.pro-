@@ -1,8 +1,9 @@
-let menuToggle = document.querySelector(".main-nav__toggle");
-let mainNavWrapper = document.querySelector(".main-nav__wrapper");
-
+let menuToggle = document.querySelector(".main-header__btn");
+let mainHeader = document.querySelector(".main-header");
+let body = document.querySelector("body");
 menuToggle.addEventListener("click", function(evt) {
     evt.preventDefault();
     menuToggle.classList.toggle("hamburger--close");
-    mainNavWrapper.classList.toggle("main-nav__wrapper--shown");
+    mainHeader.classList.toggle("main-header--opened");
+    body.classList.toggle("noscroll");
 });

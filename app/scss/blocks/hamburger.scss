@@ -1,38 +1,53 @@
 $hamburger-color: #000000;
 
 .hamburger {
-    position: relative;
-    width: 40px;
-    height: 26px;
+    position: absolute;
+    width: 28px;
+    height: 28px;
     border: 0;
+    padding: 0;
     background-color: transparent;
-    &::before,
-    &::after {
-        content: "";
+    overflow: hidden;
+    z-index: 2;
+    & span {
         position: absolute;
-        left: 5px;
-        width: 30px;
-        height: 4px;
+        right: 0;
+        width: 28px;
+        height: 3px;
+        border-radius: 3px;
         background-color: $hamburger-color;
-        border-radius: 5px;
-        transition: 0.3s all;
+        transition: 0.3s background ease,
+                    0.1s transform ease;
     }
-    &::before {
-        top: 3px;
-        box-shadow: 0px 8px $hamburger-color;
+    & span:first-child {
+        top: 5.5px;
     }
-    &::after {
-        bottom: 3px;
+    & span:nth-child(2) {
+        width: 20px;
+        top: 50%;
+        margin-top: -1.5px;
+    }
+    & span:last-child {
+        bottom: 5.5px;
+    }
+    &:hover span {
+        background-color: $accent-color;
+    }
+    &:active span {
+        background-color: rgba($accent-color, 0.3);
     }
 }
 .hamburger--close {
-    &::before {
-        top: 11px;
-        box-shadow: none;
+    & span:first-child {
+        top: 50%;
         transform: rotate(45deg);
+
     }
-    &::after {
-        bottom: 11px;
+    & span:nth-child(2) {
+        transform: translateX(100%);
+    }
+    & span:last-child {
+        top: 50%;
         transform: rotate(-45deg);
     }
 }
