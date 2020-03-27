@@ -1,0 +1,33 @@
+.intro {
+    padding: 66px 0;
+    width: 100%;
+}
+.intro__tagline {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 56px;
+    line-height: 65px;
+    font-weight: bold;
+}
+.intro__text {
+    max-width: 741px;
+    margin: 0;
+    margin-bottom: 68px;
+    font-size: 32px;
+    line-height: 51px;
+    color: #4f4f4f;
+}
+@media (max-width: $mobile-width) {
+    .intro {
+        padding: 0;
+    }
+    .intro__tagline {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .intro__text {
+        margin-bottom: 50px;
+        font-size: 20px;
+        line-height: 35px;
+    }
+}

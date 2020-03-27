@@ -33,6 +33,9 @@
     height: 58px;
     margin-right: 25px;
 }
+.main-header__nav {
+    margin-top: 12px;
+}
 @media(max-width: $mobile-width) {
     .main-header__btn {
         display: block;
