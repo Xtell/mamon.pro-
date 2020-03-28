@@ -17,6 +17,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-debug": "^4.0.0",
+    "gulp-ext-replace": "^0.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-newer": "^1.4.0",
     "gulp-postcss": "^8.0.0",

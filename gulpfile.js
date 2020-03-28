@@ -15,7 +15,8 @@ let gulp            = require('gulp'),
     concat          = require('gulp-concat'),
     del             = require('del'),
     browserSync     = require('browser-sync').create(),
-    debug           = require('gulp-debug');
+    debug           = require('gulp-debug'),
+    extReplace      = require("gulp-ext-replace");
 
 let paths = {
     'scss': './app/scss/',
@@ -57,11 +58,8 @@ gulp.task('scripts', function() {
 
 gulp.task('jpegAndPngOptimize', function() {
     return gulp.src(paths.imagesSrc + '**/*')
-    .pipe(cache(
-
-    ))
     .pipe(imagemin([
-           imagemin.mozjpeg({quality: 75, progressive: true}),
+           imagemin.mozjpeg({quality: 85, progressive: true}),
            imagemin.optipng({optimizationLevel: 3})
         ]))
 	.pipe(gulp.dest(paths.imagesDest));
@@ -69,7 +67,7 @@ gulp.task('jpegAndPngOptimize', function() {
 gulp.task('jpegOptimize', function() {
     return gulp.src(paths.imagesSrc + '**/*.{jpg, jpeg}')
     .pipe(imagemin([
-        imagemin.mozjpeg({quality: 75, progressive: true})
+        imagemin.mozjpeg({quality: 90, progressive: true})
     ]))
     .pipe(gulp.dest(paths.imagesDest));
 });
@@ -85,18 +83,14 @@ gulp.task('makeWebp', function() {
     .pipe(imagemin([
         webp({quality: 80})
     ]))
+    .pipe(extReplace(".webp"))
     .pipe(gulp.dest(paths.imagesDest));
 });
 
 gulp.task('optimizeSvg', function() {
     return gulp.src(paths.imagesSrc + '**/*.svg')
     .pipe(imagemin([
-        imagemin.svgo({
-            plugins: [
-                {removeViewBox: true},
-                {cleanupIDs: false}
-            ]
-        })
+        imagemin.svgo({})
     ]))
     .pipe(gulp.dest(paths.imagesDest));
 });
