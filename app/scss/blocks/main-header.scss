@@ -4,7 +4,6 @@
     padding-bottom: 53px;
 }
 .main-header__container {
-    position: relative;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -36,13 +35,14 @@
 .main-header__nav {
     margin-top: 12px;
 }
-@media(max-width: $mobile-width) {
+@media(max-width: $small-devices) {
     .main-header__btn {
         display: block;
+        margin-top: -14px;
     }
     .main-header__wrapper {
         position: absolute;
-        top: 90px;
+        top: 140px;
         left: -100vw;
         width: 100vw;
         min-height: 100vh;
@@ -56,10 +56,5 @@
     }
     .main-header--opened .main-header__wrapper {
         transform: translateX(100%);
-    }
-    .main-header__btn {
-        top: 50%;
-        right: 20px;
-        margin-top: -14px;
     }
 }

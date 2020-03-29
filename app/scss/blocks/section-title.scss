@@ -1,8 +1,8 @@
-.section__title-wrapper {
+.section-title{
     width: 100%;
     position: relative;
 }
-.section-title {
+.section-title h2 {
     margin-left: -19px;
     font-family: Ubuntu;
     font-style: normal;
@@ -26,5 +26,16 @@
         height: 1px;
         background-color: #c2c2c2;
         z-index: -1;
+    }
+}
+
+@media (min-width: $medium-devices) and (max-width: $large-devices){
+    .section-title h2{
+        margin-left: 0;
+    }
+}
+@media (max-width: $xSmall-devices) {
+    .section-title h2 {
+        margin-left: 0;
     }
 }

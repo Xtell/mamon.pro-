@@ -1,8 +1,28 @@
 // VARIABLES
-$mobile-width: 708px;
+$mobile-first: false;
+// Breakpoints
+$xSmall-devices: null;
+$small-devices: null;
+$medium-devices: null;
+$large-devices: null;
+$xLarge-devices: null;
+@if $mobile-first {
+    $small-devices: 576px;
+    $medium-devices: 768px;
+    $large-devices: 992px;
+    $xLarge-devices: 1200px;
+} @else {
+    $xSmall-devices: 575.98px;
+    $small-devices: 767.98px;
+    $medium-devices: 991.98px;
+    $large-devices: 1299.98px;
+}
+
+
 $accent-color: #5528ff;
 $text-color: #4f4f4f;
 //LIBRARIES
+
 @import '../../node_modules/normalize.scss/normalize';
 
 // FONTS
@@ -54,12 +74,28 @@ body {
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
+    @media(max-width: $large-devices) {
+        & {
+            // max-width: 960px;-devices
+        }
+    }
+    @media(max-width: $medium-devices) {
+        & {
+            max-width: 720px;
+        }
+    }
+    @media(max-width: $small-devices) {
+        & {
+            max-width: 540px;
+        }
+    }
+    @media(max-width: $xSmall-devices) {
+        & {
+            max-width: auto;
+        }
+    }
 }
+
 .noscroll {
     overflow: hidden;
-}
-@media (max-width: $mobile-width) {
-    .container {
-        
-    }
 }
