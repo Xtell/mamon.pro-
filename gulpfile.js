@@ -83,7 +83,7 @@ gulp.task('pngOptimize', function() {
 gulp.task('makeWebp', function() {
     return gulp.src(paths.imagesSrc + '**/*.{png,jpg,jpeg}')
     .pipe(imagemin([
-        webp({quality: 80})
+        webp({quality: 90})
     ]))
     .pipe(extReplace(".webp"))
     .pipe(gulp.dest(paths.imagesDest));
