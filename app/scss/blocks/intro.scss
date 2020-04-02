@@ -31,3 +31,9 @@
         line-height: 35px;
     }
 }
+
+@media (max-width: $xSmall-devices) {
+    .intro__link {
+        width: 100%;
+    }
+}

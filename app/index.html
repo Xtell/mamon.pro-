@@ -26,7 +26,7 @@
                         <li class="main-nav__item"><a href="#services" class="main-nav__link">Services</a></li>
                         <li class="main-nav__item"><a href="#clients" class="main-nav__link">Clients</a></li>
                         <li class="main-nav__item"><a href="#team" class="main-nav__link">Our team</a></li>
-                        <li class="main-nav__item"><a href="#contactUs" class="btn btn--small main-nav__btn">Contact Us</a></li>
+                        <li class="main-nav__item"><a href="contactUs.html" class="btn btn--small main-nav__btn" >Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -42,7 +42,7 @@
                 <p class="intro__text">
                     We understand the intricacies of web development inside-out. That's why we build rock-solid Mobile and Web applications enriched with user-centered visual experiences.
                 </p>
-                <a href="" class="intro__link btn btn--large">Contact Us</a>
+                <a href="contactUs.html" class="intro__link btn btn--large">Contact Us</a>
             </div>
         </section>
         <section class="services">
@@ -311,6 +311,34 @@
             </ul>
         </div>
     </footer>
+    <div class="modal" id="modal-callback">
+        <button class="modal__close" type="button">
+            <span class="visually-hidden">Close modal</span>
+        </button>
+        <h2 class="modal__title">Contact us</h2>
+        <div class="modal__body">
+            <form action="" class="callback-form">
+                <div class="callback-form__wrapper">
+                    <label class="callback-form__label">
+                        <span class="callback-form__label-text">Name:</span>
+                        <input class="callback-form__input" type="text" name="phone" placeholder="John" required>
+                    </label>
+                    <label class="callback-form__label">
+                        <span class="callback-form__label-text">Phone:</span>
+                        <input class="callback-form__input" type="tel" name="phone" placeholder="+1 123 456 7890" required>
+                    </label>
+                </div>
+                    <label class="callback-form__label callback-form__label--checkbox">
+                        <input class="visually-hidden" type="checkbox" name="agree">
+                        <span class="callback-form__checkbox"></span>
+                        <span class="callback-form__label-text">I agree</span>
+                    </label>
+                    <button type="submit" class="btn callback-form__btn">Send</button>
+            </form>
+        </div>
+    </div>
+    <div class="overlay">
+    </div>
     <script src="js/script.min.js"></script>
 </body>
 </html>
